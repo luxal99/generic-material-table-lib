@@ -1,30 +1,11 @@
-import {TemplateRef} from "@angular/core";
+import { TemplateRef } from '@angular/core';
 
 export interface Column {
   name: string;
   displayedName: string;
   value: string;
-  columnType: columnType
-  templateRef?: TemplateRef<any>
+  columnType: columnType;
+  templateRef?: TemplateRef<any>;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-type columnType = "GENERIC" | "CUSTOM"
+type columnType = 'GENERIC' | 'CUSTOM';
