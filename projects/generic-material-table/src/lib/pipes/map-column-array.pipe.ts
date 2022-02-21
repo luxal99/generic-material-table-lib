@@ -1,5 +1,7 @@
+import {from} from "rxjs";
+
 import { Pipe, PipeTransform } from '@angular/core';
-import { Column } from '../../Column';
+import { Column } from '../models/Column';
 
 @Pipe({
   name: 'mapColumnArray',

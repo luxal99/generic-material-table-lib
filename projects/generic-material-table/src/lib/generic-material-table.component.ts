@@ -1,12 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Column} from "./models/Column";
+import {CustomColumnModel} from "./models/CustomColumnModel";
 
 @Component({
   selector: 'lib-generic-material-table',
-  template: ` <p>generic-material-table works!</p> `,
-  styles: [],
+  templateUrl: "./generic-material-table.component.html",
+  styleUrls: ['./generic-material-table.component.css'],
 })
 export class GenericMaterialTableComponent implements OnInit {
-  constructor() {}
+  @Input() dataSource: any[] = [];
+  @Input() displayedColumns: Column[] = [];
+  @Input() customColumnTemplate: CustomColumnModel[] = [];
 
-  ngOnInit(): void {}
+  constructor() {
+  }
+
+  ngOnInit(): void {
+  }
 }
