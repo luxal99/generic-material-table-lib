@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "generic-material-table": {
+      "projectType": "library",
+      "root": "projects/generic-material-table",
+      "sourceRoot": "projects/generic-material-table/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/generic-material-table/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/generic-material-table/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/generic-material-table/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/generic-material-table/src/test.ts",
+            "tsConfig": "projects/generic-material-table/tsconfig.spec.json",
+            "karmaConfig": "projects/generic-material-table/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "generic-material-table"
 }
