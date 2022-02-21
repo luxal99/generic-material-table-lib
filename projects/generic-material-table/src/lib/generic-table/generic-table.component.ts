@@ -5,19 +5,19 @@ import {
   OnInit,
   Output,
   TemplateRef,
-} from "@angular/core";
-import { Column } from "../Column";
-import { openDialog } from "../../modal/OpeningModal";
-import { FormBuilderComponent } from "../../form-components/form-builder/form-builder.component";
-import { setDialogConfig } from "../../modal/DialogConfig";
-import { MatDialog } from "@angular/material/dialog";
-import { FormBuilderConfig } from "../../form-components/models/FormBuilderConfig";
-import { openConfirmDialog } from "../../confirm-dialog/config/confirm-dialog-config";
+} from '@angular/core';
+import { Column } from '../Column';
+import { openDialog } from '../../modal/OpeningModal';
+import { FormBuilderComponent } from '../../form-components/form-builder/form-builder.component';
+import { setDialogConfig } from '../../modal/DialogConfig';
+import { MatDialog } from '@angular/material/dialog';
+import { FormBuilderConfig } from '../../form-components/models/FormBuilderConfig';
+import { openConfirmDialog } from '../../confirm-dialog/config/confirm-dialog-config';
 
 @Component({
-  selector: "app-generic-table",
-  templateUrl: "./generic-table.component.html",
-  styleUrls: ["./generic-table.component.sass"],
+  selector: 'app-generic-table',
+  templateUrl: './generic-table.component.html',
+  styleUrls: ['./generic-table.component.sass'],
 })
 export class GenericTableComponent implements OnInit {
   @Input() dataSource: any;
@@ -39,7 +39,7 @@ export class GenericTableComponent implements OnInit {
     openDialog(
       FormBuilderComponent,
       setDialogConfig({
-        width: "30%",
+        width: '30%',
         data: this.genericDialogConfig,
       }),
       this.dialog
